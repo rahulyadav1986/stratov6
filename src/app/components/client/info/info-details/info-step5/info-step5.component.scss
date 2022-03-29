@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 .login-info-step{
     height: 100%;
     .login-info-step-wraper{
@@ -12,17 +20,17 @@
                 .history{
                     padding: 0px 0px 100px;
                     .history-top-wraper{
-                        padding-top: 50px;
+                        padding-top: 68px;
                         padding-bottom: 100px;
                         display: flex;
                         flex-wrap: wrap;
                         align-items: center;
-                        justify-content: center;
+                        justify-content: space-between;
                         .history-image{
-                            width: 50%;
+                            width: 48%;
                         }
                         .custom-heading-top{
-                            width: 50%;
+                            width: 48%;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
@@ -34,7 +42,7 @@
                             }
                             .convert-to-strato-btn{
                                 .cs-button{
-                                    width: 42%;
+                                    width: 100%;
                                     display: inline-block;
                                     padding: 15px 0px;
                                     border-radius: 4px;
@@ -55,32 +63,34 @@
                         flex-wrap: wrap;
                         justify-content: center;
                         .history-list-wrap{
-                            width: 100%;
+                            width: 66%;
                             .history-list{
                                 margin: 0px;
                                 padding: 0px;
                                 .history-item{
                                     position: relative;
-                                    font-size: 17px;
+                                    font-size: 16px;
+                                    line-height: 30px;
                                     background-color: rgb(247, 247, 247);
-                                    padding: 24px 24px 24px 40px;
+                                    padding: 24px 20px;
                                     border: 1px solid rgba(0, 0, 0, 0.1);
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
                                     margin-bottom: 15px;
                                     .history-item-about{
-                                        margin: 0;                                      
+                                        margin: 0;   
+                                        width: 40%;
+                                        margin-right: 5px;                                   
                                         display: flex;
                                         align-items: center;
                                         flex-direction: column;
                                         justify-content: center;
                                         text-align: center;
-                                        flex: 0 0 16%;
                                         .history-item-img{
                                             width: 40px;
                                             padding-bottom: 8px;
-                                            margin-right: 10px;
+                                            
                                         }
                                         .history-time{
                                             font-family: Montserrat, sans-serif;
@@ -111,7 +121,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 999;
+        z-index: 1050;
         background: rgba(0,0,0, 0.4);
         .modal-content{
             width: 50%;
@@ -149,6 +159,12 @@
                     margin: 0;
                     .form-group {
                         margin-bottom: 1rem;
+                        label {
+                            font-size: 22px;
+                            font-weight: 700;
+                            color: #163172;
+                            font-family: 'Montserrat', sans-serif;
+                        }
                         .form-group label {
                             font-size: 22px;
                             font-weight: 700;
@@ -273,6 +289,21 @@
             .login-info-content{
                 .main-container{
                     max-width: 680px;
+                    .history{
+                        .history-table{
+                            .history-list-wrap{
+                                .history-list{
+                                    .history-item{
+                                        font-size: 15px;
+                                        line-height: 25px;
+                                        .history-item-about{
+                                            width: 50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -288,11 +319,202 @@
                         .history-top-wraper{                          
                             flex-direction: column;
                             .history-image{
-                                width: 100%;
+                                width: 80%;
                                 margin-bottom: 50px;
                             }
                             .custom-heading-top{
-                                width: 100%;
+                                width: 95%;
+                            }
+                        }
+                        .history-table{
+                            .history-list-wrap{
+                                .history-list{
+                                    .history-item{
+                                        font-size: 14px;
+                                        .history-item-about{
+                                            width: 40%;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .modal-wraper{
+            .modal-content{
+                .modal-header{
+                    h4{
+                        visibility: hidden;
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                .main-container{
+                    max-width: 382px;
+                    .history{
+                        .history-table{
+                            .history-list-wrap{
+                                .history-list{
+                                    .history-item-about{
+                                           
+                                        .history-time{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .history-item{
+                                        flex-direction: column;
+                                        text-align: center;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-wraper{
+            .modal-content{
+                form{
+                    .modal-body{
+                        .available-balance-content{
+                            p{
+                                font-size: 15px;
+                                padding-inline: 6px;
+                            }
+                            .btn{
+                                padding: 0 20px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .modal-footer{
+                        .slider-range{
+                            font-size: 14px;
+                            .form-label{
+                                margin-bottom: 1.5rem;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:650px){
+    .login-info-step{
+        .login-info-step-wraper{
+           .login-info-content{
+               .main-container{
+                .history{
+                    .history-top-wraper{
+                        .custom-heading-top{
+                            width: 77%;
+                        }
+                    }
+                    .history-table{
+                        .history-list-wrap{
+                            .history-list{
+                                .history-item{
+                                    font-size: 12px;
+                                    line-height: 21px;
+                                    .history-item-about{
+                                        width: 90%;
+                                        margin-right: 0;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               }
+           }
+        }
+        .modal-wraper{
+            .modal-content{
+                width: 60%;
+            }
+        }
+    }
+}
+@media only screen and (max-width:530px){
+    .login-info-step{
+        .modal-wraper{
+            .modal-content{
+                width: 70%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 454px){
+    .login-info-step{
+        .login-info-step-wraper{
+            .login-info-content{
+                .main-container{
+                    max-width: 346px;
+                    .history{
+                        .history-top-wraper{
+                            padding-top: 78px;
+                        }
+                        .history-table{
+                            .history-list-wrap{
+                                .history-list{
+                                    .history-item{
+                                        flex-direction: column;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-wraper{
+            .modal-content{
+                width: 78%;
+            }
+        }
+    }
+}
+@media only screen and (max-width:412px){
+    .login-info-step{
+        .modal-wraper{
+            .modal-content{
+                width: 80%;
+                form{
+                    .modal-body{
+                        .available-balance-content{
+                            p{
+                                font-size: 13px;
+                                padding-inline: 3px;
+                                line-height: 20px;
+                            }
+                            .btn{
+                                padding: 0 5px;
+                            }
+                        }
+                    }
+                    .modal-footer{
+                        .slider-range{
+                            font-size: 11px;
+                            .form-label{
+                                font-size: 11px;
                             }
                         }
                     }

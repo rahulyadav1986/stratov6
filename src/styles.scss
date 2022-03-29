@@ -206,6 +206,7 @@ header{
 
 
 .custom_button{
+  z-index: 1000 !important;
   a{
     height: 36px;
     padding: 10px 50px 10px 24px;
@@ -215,6 +216,7 @@ header{
     text-transform: capitalize;
     border-radius: 50px;
     position: relative;
+    
       &::before{
         background-image: url(../src/assets/images/arrow.png);
         background-repeat: no-repeat;
@@ -229,6 +231,7 @@ header{
         margin: auto;
         right: 4px;
         content: "";
+        
       }
   }
 }

@@ -69,21 +69,40 @@
             .main_form_back{
                 max-width: 425px;
                 width: 100%;
-                
+                .ng-submitted{
+                    .input_back{
+                        input{
+                            &.ng-invalid{
+                                border-color: red;
+                            }
+                        }
+                    }
+                }
                 .input_back{
                     width: 100%;
-                    padding: 0 58px 0 0;
-                    background-repeat: no-repeat;
-                    background-position: 95% center;
+                    padding: 0 0 0 0;
+                    
                     margin-bottom: 16px;
-                    border: #f0f0f0 2px solid;
+                    position: relative;
                     &.user{
-                        background-image: url(../../../../assets/images/user.png);
+                        input{
+                            background-image: url(../../../../assets/images/user.png);
+                        }
                         
                     }
                     &.pass{
-                        background-image: url(../../../../assets/images/pass.png);
+                        input{
+                            background-image: url(../../../../assets/images/pass.png);
+                        }
                         
+                    }
+                    .text-danger{
+                        font-size: 12px;
+                        color: red;
+                        font-style: italic;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
                     }
                     input{
                         width: 100%;
@@ -97,6 +116,15 @@
                         font-family: "NTR", sans-serif;
                         font-weight: 500;
                         background-color: transparent;
+                        background-repeat: no-repeat;
+                        background-position: 95% center;
+                        border: #f0f0f0 2px solid;
+                        &.ng-touched{
+                            border-color: red;
+                        }
+                        &.ng-valid{
+                            border-color: #f0f0f0;
+                        }
                         &::placeholder{
                             color: #454545;
                         }
@@ -159,6 +187,7 @@
                     width: 100%;
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     margin-top: 30px;
                 }
                 
@@ -180,6 +209,11 @@
                 text-transform: uppercase;
                 height: 46px;
                 margin-right: 14px;
+                &.mat-button-disabled{
+                    // background-color: #ddd;
+                    opacity: .5;
+                    color: #FFF;
+                }
                 
             }
             .mat-custom-strock-button {

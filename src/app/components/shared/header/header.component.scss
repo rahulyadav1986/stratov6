@@ -43,13 +43,15 @@
     z-index: 999;
     overflow: hidden;
     
+    
     .details{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 267px;
         height: 100%;
         padding-top: 20px;
+       
     }
     .logo{
         padding-left: 60px;
